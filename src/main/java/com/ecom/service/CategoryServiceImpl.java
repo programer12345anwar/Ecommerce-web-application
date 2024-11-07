@@ -22,6 +22,12 @@ public class CategoryServiceImpl implements CategoryService {
 		return false;
 	}
 
+	@Override
+	public Category getCategoryById(int id) {
+		Category category = categoryRepository.findById(id).orElse(null);
+		return category;
+	}
+
 	@Autowired
 	private CategoryRepository categoryRepository;
 
@@ -39,4 +45,5 @@ public class CategoryServiceImpl implements CategoryService {
 	public List<Category> getAllCategory() {
 		return categoryRepository.findAll();
 	}
+
 }

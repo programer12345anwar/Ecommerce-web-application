@@ -88,7 +88,8 @@ public class AdminController {
 
 	@GetMapping("/loadEditCategory")
 	public String loadEditCategory() {
-		return "admin/edit_category";
+		// m.addAttribute("category", categoryService.getCategoryById(id));
+		return "admin/edit_category";// this page should show
 	}
 
 }

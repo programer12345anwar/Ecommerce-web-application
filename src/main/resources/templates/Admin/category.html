@@ -89,9 +89,9 @@
 											th:src="@{'/img/category_img/'+${cat.imageName}}"
 											width="60px" height="60px"></td>
 
-										<td><a href="#" class="btn btn-primary btn-sm"><i
+										<td><a href="@{'admin/loadEditCategory'}" class="btn btn-primary btn-sm" ><i
 												class="fa-solid fa-pen-to-square mx-1 text-white"></i>Edit</a> <a
-											th:href="@{'/admin/deleteCategory/'+${cat.id}}" href="#"
+											th:href="@{'/admin/deleteCategory/'+${cat.id}}" href=""
 											class="btn btn-danger btn-sm"><i
 												class="fa-solid fa-trash-can text-white mx-1"></i> Delete</a></td>
 									</tr>
