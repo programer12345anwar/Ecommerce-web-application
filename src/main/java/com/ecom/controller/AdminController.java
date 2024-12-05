@@ -86,10 +86,10 @@ public class AdminController {
 		return "redirect:/admin/category";
 	}
 
-	@GetMapping("/loadEditCategory")
-	public String loadEditCategory() {
-		// m.addAttribute("category", categoryService.getCategoryById(id));
-		return "admin/edit_category";// this page should show
+	@GetMapping("/loadEditCategory/{id}")
+	public String loadEditCategory(@PathVariable int id, Model m) {
+		m.addAttribute("category", categoryService.getCategoryById(id));
+		return "admin/edit_category";
 	}
 
 }
