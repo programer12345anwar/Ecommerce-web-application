@@ -82,14 +82,15 @@
 								<tbody>
 
 									<tr th:each="cat, c:${categorys}">
-										<th scope="row">[[${c.count}]]</th>
+										<!-- <th scope="row"> [[${c.count}]] </th> -->
 										<td>[[${cat.name}]]</td>
 										<td>[[${cat.isActive}]]</td>
 										<td><img
 											th:src="@{'/img/category_img/'+${cat.imageName}}"
 											width="60px" height="60px"></td>
 
-										<td><a href="@{'admin/loadEditCategory'}" class="btn btn-primary btn-sm" ><i
+										<td><a href="@{'admin/loadEditCategory'}"
+											class="btn btn-primary btn-sm"><i
 												class="fa-solid fa-pen-to-square mx-1 text-white"></i>Edit</a> <a
 											th:href="@{'/admin/deleteCategory/'+${cat.id}}" href=""
 											class="btn btn-danger btn-sm"><i
